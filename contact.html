@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <div class="logo">MyLogo</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contact Form Section -->
+    <section class="contact-us">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Your Name" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="button" onclick="saveToFile()">Save Message</button>
+        </form>
+    </section>
+
+    <script>
+        async function saveToFile() {
+            // Get form values
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            if (!name || !email || !message) {
+                alert("Please fill in all fields.");
+                return;
+            }
+
+            // Create content for the text file
+            const content = `Name: ${name}\nEmail: ${email}\nMessage: ${message}\n\n`;
+
+            // Create a Blob and a download link
+            const blob = new Blob([content], { type: "text/plain" });
+            const link = document.createElement("a");
+            link.href = URL.createObjectURL(blob);
+            link.download = "contact-messages.txt";
+
+            // Trigger download
+            link.click();
+
+            // Cleanup
+            URL.revokeObjectURL(link.href);
+            alert("Message saved successfully!");
+        }
+    </script>
+</body>
+</html>

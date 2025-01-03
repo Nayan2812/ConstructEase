@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D View</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <img class='logopic' src="logo.png" alt="Logo">
+        <div class="logo">CONSTRUCTEASE</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    
+    <h1 th:text="${viewType}"></h1>
+    <canvas id="2d-canvas"></canvas>
+    
+    <script>
+        const canvas = document.getElementById('2d-canvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = 800;
+        canvas.height = 600;
+        //<img src="2d.jpg">
+        ctx.fillStyle = 'blue';
+        ctx.fillRect(100, 100, 200, 150);
+    </script>
+</body>
+</html>

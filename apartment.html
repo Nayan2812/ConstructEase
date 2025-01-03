@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONSTRUCT EASE</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <img class='logopic' src="logo.png" alt="Logo">
+        <div class="logo">CONSTRUCTEASE</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Apartment Details Section -->
+    <section class="apartment-section">
+        <h2>Explore Our Home</h2>
+
+        <!-- Apartment 1 -->
+<div class="apartment">
+    <img src="livingroom.jpg" alt="Apartment 1" class="apartment-image">
+    <div class="apartment-details">
+        <h3>Living Room</h3>
+        <p>A modern 2-bedroom apartment with spacious living and a great view.</p>
+        <div class="view-options">
+            <button onclick="window.location.href='apart2d.html'">View in 2D</button>
+            <button onclick="window.location.href='apart3d.html'">View in 3D</button>
+            <button onclick="window.location.href='apartvr.html'">View in VR</button>
+        </div>
+    </div>
+</div>
+
+<!-- Full-Screen Modal -->
+<div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img id="modalImage" class="modal-content" alt="2D View">
+</div>
+
+        <!-- Apartment 2 -->
+        <div class="apartment">
+            <img src="bedroom.jpg" alt="Apartment 2" class="apartment-image">
+            <div class="apartment-details">
+                <h3>Bedroom</h3>
+                <p>A cozy 1-bedroom apartment perfect for a small family or couple.</p>
+                <div class="view-options">
+                    <button onclick="alert('View Apartment 2 in 2D')">View in 2D</button>
+                    <button onclick="alert('View Apartment 2 in 3D')">View in 3D</button>
+                    <button onclick="alert('View Apartment 2 in VR')">View in VR</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Apartment 3 -->
+        <div class="apartment">
+            <img src="kitchen.jpg" alt="Apartment 3" class="apartment-image">
+            <div class="apartment-details">
+                <h3>Kitchen</h3>
+                <p>An elegant 3-bedroom apartment with a balcony and modern interiors.</p>
+                <div class="view-options">
+                    <button onclick="alert('View Apartment 3 in 2D')">View in 2D</button>
+                    <button onclick="alert('View Apartment 3 in 3D')">View in 3D</button>
+                    <button onclick="alert('View Apartment 3 in VR')">View in VR</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Apartment 4 -->
+        <div class="apartment">
+            <img src="bathroom.jpg" alt="Apartment 4" class="apartment-image">
+            <div class="apartment-details">
+                <h3>Bathroom</h3>
+                <p>A luxurious penthouse apartment with stunning city views and high-end finishes.</p>
+                <div class="view-options">
+                    <button onclick="alert('View Apartment 4 in 2D')">View in 2D</button>
+                    <button onclick="alert('View Apartment 4 in 3D')">View in 3D</button>
+                    <button onclick="alert('View Apartment 4 in VR')">View in VR</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Apartment 5 -->
+        <div class="apartment">
+            <img src="homegarden.jpg" alt="Apartment 5" class="apartment-image">
+            <div class="apartment-details">
+                <h3>Home Garden</h3>
+                <p>A spacious 4-bedroom apartment with contemporary design and premium amenities.</p>
+                <div class="view-options">
+                    <button onclick="alert('View Apartment 5 in 2D')">View in 2D</button>
+                    <button onclick="alert('View Apartment 5 in 3D')">View in 3D</button>
+                    <button onclick="alert('View Apartment 5 in VR')">View in VR</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
